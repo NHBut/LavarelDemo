@@ -6,8 +6,6 @@
     <title>@yield('title', 'Laravel App')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://lavareldemo-production.up.railway.app/build/assets/app.css">
-    <script src="https://lavareldemo-production.up.railway.app/build/assets/app.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
 </head>
 <body>
     <nav>
