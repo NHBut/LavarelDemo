@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Laravel App')</title>
+
+    {{-- Tắt Vite trong production (hoặc Railway) vì Railway không chạy được Vite dev server --}}
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+
+    {{-- Sử dụng link HTTPS từ domain custom của bạn --}}
+    <link rel="stylesheet" href="https://mylaravelapp.run.place/build/assets/app.css">
+    <script src="https://mylaravelapp.run.place/build/assets/app.js" defer></script>
+
+    {{-- Chart.js CDN nếu bạn dùng biểu đồ --}}
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     <nav>
