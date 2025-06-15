@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Laravel App')</title>
+
+    {{-- Dùng Vite để load CSS/JS đúng cách --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <link rel="stylesheet" href="https://lavareldemo-production.up.railway.app/build/assets/app.css">
+
+    {{-- Không cần load thêm file app.css từ domain khác nữa --}}
+    {{-- Nếu bạn muốn dùng bản production từ Railway, cần chắc chắn file tồn tại và đúng đường dẫn --}}
 </head>
 <body>
     <nav>
@@ -25,6 +29,7 @@
             </div>
         </div>
     </nav>
+
     <main>
         @if (session('success'))
             <div class="alert alert-success">{{ session('success') }}</div>
@@ -32,8 +37,10 @@
         @if (session('error'))
             <div class="alert alert-error">{{ session('error') }}</div>
         @endif
+
         @yield('content')
     </main>
+
     <footer>
         <p>© 2025 Laravel App</p>
     </footer>
